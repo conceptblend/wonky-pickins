@@ -1,0 +1,24 @@
+1	Which team will score the first goal in the game (Home or Away)?
+2	Which team will score the last goal in the game (Home or Away)?
+3	Which team will win the opening face-off in the game (Home or Away)?
+4	Which team will have more total shots on goal in the game (Home or Away)?
+5	Which team will have more penalty minutes in the game (Home or Away)?
+6	Will the game go to Overtime?
+7	Will there be 60 or more total shots in the game?
+8	Will a player be ejected from the game?
+9	Will there be an unsuccessful Coaches Challenge in the game?
+10	Will the 1st intermission interview be with a Forward or Defenseman?
+11	Will the total number of goals in the game be Even or Odd?
+12	Will there be a shut out for either team in the game?
+13	Will there be a hat-trick in the game?
+14	Will someone get a Gordie Howe hat trick? (goal, assist, fight)
+15	Will there be a goal called back in the game?
+16	Will there be a fight in the game?
+17	Will there be a misconduct in the game?
+18	Will there be a goal in the first 5 mins in the game?
+19	Will there be more goals by Even number players in the game?
+20	Will there be more goals by Odd number players in the game?
+21	Will there be a goal by a Defenseman in the game?
+22	Will there be a Coaches Challenge in the game?
+23	Will there be score a power-play goal in the game?
+24	Will there be score a short-handed goal in the game?
