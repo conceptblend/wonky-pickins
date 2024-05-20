@@ -41,99 +41,136 @@
           --pico-font-size: 112.5%;
         }
       }
-      footer {
-        text-align: center;
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 700px;
+        }
       }
+      ol,
+      ul {
+        padding-inline-start: 1.5rem;
+      }
+      ol li,
       ul li {
         list-style-type: disc;
+      }
+      h2,
+      h3,
+      h4 {
+        color: rgba(116, 78, 171, 1);
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      section::after {
+        background: linear-gradient(to right, rgba(170, 141, 217, 1), transparent);
+        border: 0 none none;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-top: 2rem;
+        border-radius: 2px;
+        width: 100%;
+      }
+      .center {
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <header class="container">
-      <img src="favicon-32x32.png" height="32" width="32" alt="crystal ball" />
-      <h1>Wonky Pickins!</h1>
+      <div class="center">
+        <img src="android-chrome-192x192.png" height="64" width="64" alt="crystal ball" />
+        <h1>Wonky Pickins!</h1>
+      </div>
     </header>
     <main class="container">
-      <p>
-        We played around with the options in the hockey pool website and we can actually make things quite wonky with
-        the points system (in addition to the daily wonky pickins question).
-      </p>
+      <section>
+        <p>
+          We played around with the options in the hockey pool website and we can actually make things quite wonky with
+          the points system (in addition to the daily wonky pickins question).
+        </p>
+        <p>Here's what we're thinking: <strong>Choose 8 players for your roster, and one team</strong>.</p>
+        <!-- <h3>Pick your Roster + Team</h3> -->
+      </section>
+      <section>
+        <h4>Step 1 &mdash; Choose 8 players.</h4>
+        <p>Here's how they earn points. Choose wonkily.</p>
+        <ul>
+          <li>
+            <p><strong>Forward and Defense points:</strong></p>
+            <ul>
+              <li>Goal: <code>1</code></li>
+              <li>Assist: <code>1</code></li>
+              <li>Power play goal: <code>0.25</code> (bonus)</li>
+              <li>Power play assist: <code>0.25</code> (bonus)</li>
+              <li>Short-handed goal: <code>1</code> (bonus)</li>
+              <li>Short-handed assist: <code>0.5</code> (bonus)</li>
+              <li>Game-winning goal: <code>0.5</code> (bonus)</li>
+              <li>Hat trick: <code>1</code> (bonus)</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Defense</strong> will also get points for:</p>
+            <ul>
+              <li>Blocked shots: <code>0.25</code> (points per shot)</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Goalie</strong> points:</p>
+            <ul>
+              <li>Win: <code>0</code> (that's right, no points for a win unless it's a shutout!)</li>
+              <li>Shutout: <code>1</code></li>
+              <li>Lose: <code>1</code></li>
+              <li>Save: <code>0.05</code> (points per save) - e.g. 1 point for every 20 saves</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Enforcers</strong> &mdash; Limit 2</p>
+            <p>Enforcers <strong>only</strong> get points for:</p>
+            <ul>
+              <li>Hits: <code>0.25</code> (points per hit)</li>
+              <li>Penalty minutes: <code>0.5</code> (points per minute)</li>
+            </ul>
+            <p>Also...</p>
+            <ul>
+              <li>Any player can be designated as an enforcer.</li>
+              <li>
+                You can choose up to 2 enforcers. This is optional - you don't have to choose any if you don't want to.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h4>Step 2 &mdash; Choose 1 team.</h4>
+        <p>It can be any of the teams remaining (it doesn't matter if you picked players on this team or not).</p>
+        <p><strong>Teams</strong> get points for:</p>
+        <ul>
+          <li>Win (in regulation or overtime): <code>1</code></li>
+          <li>Shutout win: <code>1</code> (bonus)</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Rules</h3>
+        <p>For each game we'll also do a <strong>Wonky Pickins question worth bonus points</strong>.</p>
+        <ul>
+          <li>We'll send out the question on the group chat each game day morning.</li>
+          <li>Respond with your answer in the chat before the game starts.</li>
+          <li>
+            If you win Wonky Pickins points, they will show up in your total on the pool website the next morning.
+          </li>
+        </ul>
+        <p>If a points <strong>tie-breaker</strong> is needed, it will be determined by:</p>
 
-      <p>Here's what we're thinking: Choose 8 players for your roster, and one team.</p>
-
-      <h3>Pick your Roster + Team</h3>
-      <h4>Step 1 &mdash; Choose 8 players.</h4>
-      <p>Here's how they earn points:</p>
-      <ul>
-        <li>
-          <p><strong>Forward and Defense points:</strong></p>
-          <ul>
-            <li>Goal: <code>1</code></li>
-            <li>Assist: <code>1</code></li>
-            <li>Power play goal: <code>0.25</code> (bonus)</li>
-            <li>Power play assist: <code>0.25</code> (bonus)</li>
-            <li>Short-handed goal: <code>1</code> (bonus)</li>
-            <li>Short-handed assist: <code>0.5</code> (bonus)</li>
-            <li>Game-winning goal: <code>0.5</code> (bonus)</li>
-            <li>Hat trick: <code>1</code> (bonus)</li>
-          </ul>
-        </li>
-        <li>
-          <p><strong>Defense</strong> will also get points for:</p>
-          <ul>
-            <li>Blocked shots: <code>0.25</code> (points per shot)</li>
-          </ul>
-        </li>
-        <li>
-          <p><strong>Goalie</strong> points:</p>
-          <ul>
-            <li>Win: <code>0</code> (that's right, no points for a win unless it's a shutout!)</li>
-            <li>Shutout: <code>1</code></li>
-            <li>Lose: <code>1</code></li>
-            <li>Save: <code>0.05</code> (points per save) - e.g. 1 point for every 20 saves</li>
-          </ul>
-        </li>
-        <li>
-          <p><strong>Enforcers</strong> &mdash; Limit 2</p>
-          <p>Enforcers <strong>only</strong> get points for:</p>
-          <ul>
-            <li>Hits: <code>0.25</code> (points per hit)</li>
-            <li>Penalty minutes: <code>0.5</code> (points per minute)</li>
-          </ul>
-          <p>Also...</p>
-          <ul>
-            <li>Any player can be designated as an enforcer.</li>
-            <li>
-              You can choose up to 2 enforcers. This is optional - you don't have to choose any if you don't want to.
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h4>Step 2 &mdash; Choose 1 team.</h4>
-      <p>It can be any of the teams remaining (it doesn't matter if you picked players on this team or not).</p>
-      <p><strong>Teams</strong> get points for:</p>
-      <ul>
-        <li>Win (in regulation or overtime): <code>1</code></li>
-        <li>Shutout win: <code>1</code> (bonus)</li>
-      </ul>
-      <h2>Rules</h2>
-      <p>For each game we'll also do a <strong>Wonky Pickins question worth bonus points</strong>.</p>
-      <ul>
-        <li>We'll send out the question on the group chat each game day morning.</li>
-        <li>Respond with your answer in the chat before the game starts.</li>
-        <li>If you win Wonky Pickins points, they will show up in your total on the pool website the next morning.</li>
-      </ul>
-      <p>If a points <strong>tie-breaker</strong> is needed, it will be determined by:</p>
-
-      <ol>
-        <li>Total goals by players in your roster</li>
-        <li>Power play goals</li>
-        <li>Game-winning goals</li>
-      </ol>
+        <ol>
+          <li>Total goals by players in your roster</li>
+          <li>Power play goals</li>
+          <li>Game-winning goals</li>
+        </ol>
+      </section>
     </main>
-    <footer class="container">
-      <hr />
+    <footer class="container center">
       <img
         src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDdvczg5ZzE3YmlyMXp0c2o0ZWl4bWgxemhuODl3M3cwanZoNTZpMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fC4LBU3j96jwWs2NAI/giphy.gif"
         alt="LFG!!!!"
