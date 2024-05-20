@@ -1,10 +1,12 @@
 const BY_GAME = {
   static: [
-    "Will the game go to Overtime? (Yes or No)",
-    "Will a player be ejected from the game? (Yes or No)",
-    "Will the 1st intermission interview be with a Forward or Defenseman?",
-    "Will the total number of goals in the game be Even or Odd?",
-    "Will someone get a Gordie Howe hat trick - goal+assist+fight? (Yes or No)",
+    // "Will the game go to Overtime? (Yes or No)",
+    // "Will a player be ejected from the game? (Yes or No)",
+    // "Will the 1st intermission interview be with a Forward or Defenseman?",
+    "Will the total number of goals in the game be EVEN or ODD? (Even or Odd)",
+    // "Will someone get a Gordie Howe hat trick - goal+assist+fight? (Yes or No)",
+    "Pick a number between 1 and 99 and win points if you're closest to the first goal scorer's number without going over.",
+    "Will more goals be scored by players with EVEN or ODD jersey numbers? (Even or Odd)",
     // "Will there be a goalie goal this game?",
     // "Will a goalie get pulled in the game?",
   ],
@@ -12,19 +14,19 @@ const BY_GAME = {
     prefix: ["Will there be"],
     body: [
       "a goal called back",
-      "a fight",
-      "a misconduct",
+      "a fight (major penalty assigned)",
+      // "a misconduct",
       "a goal in the first 5 mins",
-      "more goals by Even number players",
-      "more goals by Odd number players",
-      "a goal by a Defenseman",
-      "a shut out for either team",
+      // "more goals scored by players with EVEN jersey numbers",
+      // "more goals by Odd number players",
+      // "a goal by a Defenseman",
+      // "a shut out for either team",
       "a hat-trick",
-      "60 or more total shots",
-      "an unsuccessful Coaches Challenge",
+      // "60 or more total shots",
+      // "an unsuccessful Coaches Challenge",
       "a successful Coaches Challenge",
-      "score a power-play goal",
-      "score a short-handed goal",
+      // "score a power-play goal",
+      // "score a short-handed goal",
       // "a Coaches Challenge",
     ],
     postfix: ["in the game (Yes or No)"], // "in the first period", "in the second period", "in the third period"],
@@ -41,9 +43,9 @@ const BY_TEAM = {
     body: [
       "win the opening face-off",
       "score the first goal",
-      "score the last goal",
+      // "score the last goal",
       "have more total shots on goal",
-      "have more penalty minutes",
+      // "have more penalty minutes",
       // "break a stick first",
     ],
     postfix: ["(Home or Away)"],
@@ -88,10 +90,30 @@ function pickNofM(n, arr) {
   return set;
 }
 
+/**
+ *
+ * @param {Any[]} array - The array to shuffle
+ * @returns {Any[]} A shuffled _copy_ of `array`
+ *
+ * https://bost.ocks.org/mike/shuffle/
+ */
+function shuffleIt(array, asCopy = false) {
+  let a = asCopy ? [...array] : array,
+    m = a.length,
+    i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    [a[m], a[i]] = [a[i], a[m]]; // swap
+  }
+  return a;
+}
+
 // Combine the static and dynamic options
 const teamOptions = [...BY_TEAM.static, ...composeOptions(BY_TEAM.dynamic)];
 const gameOptions = [...BY_GAME.static, ...composeOptions(BY_GAME.dynamic)];
 const allOptions = [...teamOptions, ...gameOptions];
 
-// allOptions.forEach((o, i) => console.log(`${i + 1}\t${o}`));
-pickNofM(5, allOptions).forEach((o, i) => console.log(`${i + 1}\t${o}`));
+console.log(`5 points awarded for CORRECT answers. 0 points awarded for INCORRECT answers.\n==========`);
+// allOptions.forEach((o, i) => console.log(`${(i + 1).toString().padStart(2, " ")}\t${o}`));
+// pickNofM(7, allOptions).forEach((o, i) => console.log(`${(i + 1).toString().padStart(2, " ")}\t${o}`));
+shuffleIt(pickNofM(1, allOptions)).forEach((o, i) => console.log(o));

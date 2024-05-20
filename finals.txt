@@ -1,0 +1,13 @@
+5 points awarded for CORRECT answers. 0 points awarded for INCORRECT answers.
+==========
+ 1	Which team will win the opening face-off (Home or Away)?
+ 2	Which team will score the first goal (Home or Away)?
+ 3	Which team will have more total shots on goal (Home or Away)?
+ 4	Will the total number of goals in the game be EVEN or ODD? (Even or Odd)
+ 5	Pick a number between 1 and 99 and win points if you're closest to the first goal scorer's number without going over.
+ 6	Will more goals be scored by players with EVEN or ODD jersey numbers? (Even or Odd)
+ 7	Will there be a goal called back in the game (Yes or No)?
+ 8	Will there be a fight (major penalty assigned) in the game (Yes or No)?
+ 9	Will there be a goal in the first 5 mins in the game (Yes or No)?
+10	Will there be a hat-trick in the game (Yes or No)?
+11	Will there be a successful Coaches Challenge in the game (Yes or No)?
