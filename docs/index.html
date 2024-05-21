@@ -30,6 +30,8 @@
     <style type="text/css">
       :root {
         --pico-line-height: 1.25;
+        --wonky-grad-start: rgba(170, 141, 217, 1);
+        --wonky-grad-end: rgba(237, 175, 121, 1);
       }
       @media (min-width: 576px) {
         :root {
@@ -57,13 +59,20 @@
       h2,
       h3,
       h4 {
-        color: rgba(116, 78, 171, 1);
+        background-clip: text;
+        background-color: var(--wonky-grad-start);
+        background-image: linear-gradient(45deg, var(--wonky-grad-start), var(--wonky-grad-end));
+        background-size: 60%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
       }
       section {
         margin-bottom: 2rem;
       }
       section::after {
-        background: linear-gradient(to right, rgba(170, 141, 217, 1), transparent);
+        background: linear-gradient(to right, var(--wonky-grad-start), var(--wonky-grad-end));
         border: 0 none none;
         content: "";
         display: block;
@@ -87,8 +96,8 @@
     <main class="container">
       <section>
         <p>
-          We played around with the options in the hockey pool website and we can actually make things quite wonky with
-          the points system (in addition to the daily wonky pickins question).
+          We played around with the options in the hockey pool website and we can get wonky with the point system in
+          addition to the daily question.
         </p>
         <p>Here's what we're thinking: <strong>Choose 8 players for your roster, and one team</strong>.</p>
         <!-- <h3>Pick your Roster + Team</h3> -->
@@ -102,8 +111,8 @@
             <ul>
               <li>Goal: <code>1</code></li>
               <li>Assist: <code>1</code></li>
-              <li>Power play goal: <code>0.25</code> (bonus)</li>
-              <li>Power play assist: <code>0.25</code> (bonus)</li>
+              <li>Power play goal: <code>-2</code> (erases goal and then subtracts 1)</li>
+              <!-- <li>Power play assist: <code>0.25</code> (bonus)</li> -->
               <li>Short-handed goal: <code>1</code> (bonus)</li>
               <li>Short-handed assist: <code>0.5</code> (bonus)</li>
               <li>Game-winning goal: <code>0.5</code> (bonus)</li>
