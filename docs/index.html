@@ -58,7 +58,8 @@
       }
       h2,
       h3,
-      h4 {
+      h4,
+      .gradient {
         background-clip: text;
         background-color: var(--wonky-grad-end);
         background-image: linear-gradient(45deg, var(--wonky-grad-start), var(--wonky-grad-end));
@@ -105,51 +106,99 @@
       <section>
         <h4>Step 1 &mdash; Choose 8 players.</h4>
         <p>Here's how they earn points. Choose wonkily.</p>
-        <ul>
-          <li>
-            <p><strong>Forward and Defense points:</strong></p>
-            <ul>
-              <li>Goal: <code>1</code></li>
-              <li>Assist: <code>1</code></li>
-              <li>Power play goal: <code>-2</code> (erases goal and then subtracts 1)</li>
-              <!-- <li>Power play assist: <code>0.25</code> (bonus)</li> -->
-              <li>Short-handed goal: <code>1</code> (bonus)</li>
-              <li>Short-handed assist: <code>0.5</code> (bonus)</li>
-              <li>Game-winning goal: <code>0.5</code> (bonus)</li>
-              <li>Hat trick: <code>1</code> (bonus)</li>
-            </ul>
-          </li>
-          <li>
-            <p><strong>Defense</strong> will also get points for:</p>
-            <ul>
-              <li>Blocked shots: <code>0.5</code> (points per shot)</li>
-            </ul>
-          </li>
-          <li>
-            <p><strong>Goalie</strong> points:</p>
-            <ul>
-              <li>Win: <code>0</code> (that's right, no points for a win unless it's a shutout!)</li>
-              <li>Shutout: <code>1</code></li>
-              <li>Lose: <code>1</code></li>
-              <li>Save: <code>0.05</code> (points per save) - e.g. 1 point for every 20 saves</li>
-            </ul>
-          </li>
-          <li>
-            <p><strong>Enforcers</strong> &mdash; Limit 2</p>
-            <p>Enforcers <strong>only</strong> get points for:</p>
-            <ul>
-              <li>Hits: <code>0.5</code> (points per hit)</li>
-              <li>Penalty minutes: <code>1</code> (points per minute)</li>
-            </ul>
-            <p>Also...</p>
-            <ul>
-              <li>Any player can be designated as an enforcer.</li>
-              <li>
-                You can choose up to 2 enforcers. This is optional - you don't have to choose any if you don't want to.
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <table>
+          <thead>
+            <tr>
+              <th class="gradient">Event</th>
+              <th style="text-align: right" class="gradient">Points</th>
+              <th class="gradient">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3"><strong>Forward and Defense</strong></td>
+            </tr>
+            <tr>
+              <td>Goal</td>
+              <td style="text-align: right">1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Assist</td>
+              <td style="text-align: right">1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Power play goal</td>
+              <td style="text-align: right">-2</td>
+              <td>erases goal and then subtracts 1</td>
+            </tr>
+            <tr>
+              <td>Short-handed goal</td>
+              <td style="text-align: right">1</td>
+              <td>bonus</td>
+            </tr>
+            <tr>
+              <td>Short-handed assist</td>
+              <td style="text-align: right">0.5</td>
+              <td>bonus</td>
+            </tr>
+            <tr>
+              <td>Game-winning goal</td>
+              <td style="text-align: right">0.5</td>
+              <td>bonus</td>
+            </tr>
+            <tr>
+              <td>Hat trick</td>
+              <td style="text-align: right">1</td>
+              <td>bonus</td>
+            </tr>
+            <tr>
+              <td colspan="3"><strong>Defense Only</strong></td>
+            </tr>
+            <tr>
+              <td>Blocked shots</td>
+              <td style="text-align: right">0.5</td>
+              <td>points per shot</td>
+            </tr>
+            <tr>
+              <td colspan="3"><strong>Goalie</strong></td>
+            </tr>
+            <tr>
+              <td>Win</td>
+              <td style="text-align: right">0</td>
+              <td>no points unless shutout</td>
+            </tr>
+            <tr>
+              <td>Shutout</td>
+              <td style="text-align: right">1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Lose</td>
+              <td style="text-align: right">1</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Save</td>
+              <td style="text-align: right">0.05</td>
+              <td>points per save (1 point per 20 saves)</td>
+            </tr>
+            <tr>
+              <td colspan="3"><strong>Enforcers Only (Limit 2)</strong></td>
+            </tr>
+            <tr>
+              <td>Hits</td>
+              <td style="text-align: right">0.5</td>
+              <td>points per hit</td>
+            </tr>
+            <tr>
+              <td>Penalty minutes</td>
+              <td style="text-align: right">1</td>
+              <td>points per minute</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <section>
         <h4>Step 2 &mdash; Choose 1 team.</h4>
