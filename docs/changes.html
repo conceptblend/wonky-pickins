@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" rel="noopener" target="_blank" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" rel="noopener" target="_blank" href="favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" rel="noopener" target="_blank" href="favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      rel="noopener"
+      target="_blank"
+      href="android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      rel="noopener"
+      target="_blank"
+      href="android-chrome-512x512.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" rel="noopener" target="_blank" href="apple-touch-icon.png" />
+
+    <meta name="color-scheme" content="light" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <title>Changes - Wonky Pickins!</title>
+    <style type="text/css">
+      :root {
+        --pico-line-height: 1.25;
+        --wonky-grad-start: rgba(170, 141, 217, 1);
+        --wonky-grad-end: rgba(237, 175, 121, 1);
+      }
+      @media (min-width: 576px) {
+        :root {
+          --pico-font-size: 106.25%;
+        }
+      }
+      @media (min-width: 768px) {
+        :root {
+          --pico-font-size: 112.5%;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 700px;
+        }
+      }
+      ol,
+      ul {
+        padding-inline-start: 1.5rem;
+      }
+      ol li,
+      ul li {
+        list-style-type: disc;
+      }
+      h2,
+      h3,
+      h4,
+      .gradient {
+        background-clip: text;
+        background-color: var(--wonky-grad-end);
+        background-image: linear-gradient(45deg, var(--wonky-grad-start), var(--wonky-grad-end));
+        background-size: 60%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      section::after {
+        background: linear-gradient(to right, var(--wonky-grad-start), var(--wonky-grad-end));
+        border: 0 none none;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-top: 2rem;
+        border-radius: 2px;
+        width: 100%;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <div class="center">
+        <img src="android-chrome-192x192.png" height="64" width="64" alt="crystal ball" />
+        <h1>Changes to Wonky Pickins!</h1>
+      </div>
+    </header>
+    <main class="container">
+      <section>
+        <p>
+          Every year we look back at what worked and what could be better!
+          <strong>Here's a list of what has changed over the years</strong>.
+        </p>
+      </section>
+      <section>
+        <h4>2024/2025 season</h4>
+        <ul>
+          <li><strong>Defense</strong>: Blocked shots increased from 0.25 to 0.5 (points per shot)</li>
+          <li><strong>Enforcers</strong>: Hits increased from 0.25 to 0.5 (points per hit)</li>
+          <li><strong>Enforcers</strong>: Penalty minutes increased from 0.5 to 1 (points per minute)</li>
+        </ul>
+      </section>
+      <p><a href="index.html">Back to the rules</a></p>
+    </main>
+  </body>
+</html>
